@@ -1,0 +1,34 @@
+WARN - Iajuuuuuu: Esto se escribe en el file
+WARN - Iajuuuuuu: Esto se escribe en el outputLog
+ERROR - Iajuuuuu: esto se escribe en el output
+ERROR - Iajuuuuu: Soy appLogger: esto se escribe en el output
+ERROR - Iajuuuuu: Soy appLogger: esto se escribe en el output
+ERROR - Iajuuuuu: Soy  dbLogger: esto se escribe en el output
+INFO main kennedy.ar.ui.ejemplos.Log4JExample2 - Helouuu: inicializando variables
+ERROR - Iajuuuuu: Soy appLogger: esto se escribe en el output
+ERROR - Iajuuuuu: Soy  dbLogger: esto se escribe en el output
+ERROR - Iajuuuuu: Soy appLogger: esto se escribe en el output
+ERROR - Iajuuuuu: Soy  dbLogger: esto se escribe en el output
+ERROR - Iajuuuuu: Soy appLogger: esto se escribe en el output
+ERROR - Iajuuuuu: Soy  dbLogger: esto se escribe en el output
+INFO main kennedy.ar.ui - Helouuu: inicializando variables
+INFO main kennedy.ar.ui - Helouuu: inicializando variables
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Printing information....
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Printing information....
+INFO main kennedy.ar.ui - Helouuu: inicializando variables
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Printing information....
+WARN main kennedy.ar.ui - shared model instanciado
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Helouuu: inicializando variables
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Printing information....
+INFO main kennedy.ar.ui - Helouuu: inicializando variables
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Printing information....
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Helouuu: inicializando variables
+WARN main kennedy.ar.ui - shared model instanciado
+INFO main kennedy.ar.ui - Printing information....
