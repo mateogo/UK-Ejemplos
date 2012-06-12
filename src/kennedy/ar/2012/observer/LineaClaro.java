@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Observable;
 
 
@@ -13,10 +14,12 @@ public class LineaClaro extends Linea {
 		
 		double proporcion = companiaObservable.getPorcentaje() / 100;
 		
+		DecimalFormat df = new DecimalFormat("###.##");
+		
 		if(companiaObservable.getTipoOperacion().equals(TipoOperacion.CREDITO)){
-			this.setSaldo(this.getSaldo() * (1 + proporcion));
+			this.setSaldo(Double.parseDouble(df.format(this.getSaldo() * (1 + proporcion))));
 		}else if (companiaObservable.getTipoOperacion().equals(TipoOperacion.DEBITO)){
-			this.setSaldo(this.getSaldo() * (1 - proporcion));
+			this.setSaldo(Double.parseDouble(df.format(this.getSaldo() * (1 - proporcion))));
 		}
 	}
 
