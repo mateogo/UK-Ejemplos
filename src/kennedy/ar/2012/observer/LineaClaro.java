@@ -1,31 +1,22 @@
-import java.text.DecimalFormat;
 import java.util.Observable;
-
+import org.apache.log4j.Logger;
 
 public class LineaClaro extends Linea {
-
-	public LineaClaro(String nroLinea, double saldo) {
-		super(nroLinea, saldo);
+	private static Logger logger = Logger.getLogger(LineaClaro.class);	
+		
+	public LineaClaro(String nroLinea) {
+		super(nroLinea);
+		logger.info("Linea Creada: " + this.toString());
 	}
 
 	@Override
-	public void update(Observable observable, Object arg1) {
-		CompaniaObservable companiaObservable = (CompaniaObservable) observable;
-		
-		double proporcion = companiaObservable.getPorcentaje() / 100;
-		
-		DecimalFormat df = new DecimalFormat("###.##");
-		
-		if(companiaObservable.getTipoOperacion().equals(TipoOperacion.CREDITO)){
-			this.setSaldo(Double.parseDouble(df.format(this.getSaldo() * (1 + proporcion))));
-		}else if (companiaObservable.getTipoOperacion().equals(TipoOperacion.DEBITO)){
-			this.setSaldo(Double.parseDouble(df.format(this.getSaldo() * (1 - proporcion))));
-		}
+	public void update(Observable observable, Object compania) {
+		logger.info("Nro. Linea: " + this.getNroLinea() + ", Mensaje recibido: " + ((Compania) compania).getMensajeEnviado());
 	}
 
 	@Override
 	public String toString() {
-		return "Nro. Linea: " + this.getNroLinea() + ", Saldo: $ " + this.getSaldo();
+		return this.getClass().getName();
 	}
 	
 }

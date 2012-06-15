@@ -1,23 +1,19 @@
 import java.util.List;
-
-import org.apache.log4j.Logger;
-
+import java.util.Observer;
 
 public class Compania {
-	private CompaniaObservable companiaObservable;
-	private static Logger logger = Logger.getLogger(Compania.class);
-	
-	public Compania(List<? extends Linea> lineas) {
-		this.companiaObservable = new CompaniaObservable(lineas);
+	private Sujeto sujeto;
+		
+	public Compania(List<? extends Observer> observers) {
+		this.sujeto = new Sujeto(observers);
 	}
 
-	public void realizarOperacion(TipoOperacion tipoOperacion, double porcentaje){
-		this.companiaObservable.setTipoOperacion(tipoOperacion);
-		this.companiaObservable.setPorcentaje(porcentaje);
-		logger.info("Compania realiza operacion :"+tipoOperacion+" por: "+porcentaje);
-		this.companiaObservable.setChanged();
-		logger.info("Se notifica a las líneas para que cambien su saldo.\n");
-		this.companiaObservable.notifyObservers();
+	public void enviarMensaje(TipoAviso tipoAvisoAenviar){
+		this.sujeto.enviarAviso(tipoAvisoAenviar, this);
+	}
+	
+	public String getMensajeEnviado(){
+		return this.sujeto.getMensajeActual();
 	}
 	
 }
