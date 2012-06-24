@@ -1,8 +1,0 @@
-dbname=objetos
-driver=com.oracle.jdbc.OraDriver
-url=jdbc:oracle:Tds
-host=190.2.2.180
-port=4100
-username=sistemas
-password=12345
-
